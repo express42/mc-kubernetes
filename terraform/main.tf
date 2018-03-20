@@ -56,7 +56,7 @@ resource "kubernetes_secret" "ingress" {
 
 // Ensure disk for using with PersistentVolume is created
 resource "google_compute_disk" "default" {
-  name = "${var.gke_volume_name}"
+  name = "${var.gke_volume_name}-${var.gke_name}"
   size = "${var.gke_volume_size}"
   zone = "${var.gke_zone}"
 }
