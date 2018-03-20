@@ -20,9 +20,11 @@ spec:
         component: comment
     spec:
       containers:
-      - image: chromko/comment
+      - image: chromko/comment:1.0
         name: comment
         resources:
             requests:
               cpu: 5m
-              
+        env:
+        - name: COMMENT_DATABASE_HOST
+          value: mongodb
