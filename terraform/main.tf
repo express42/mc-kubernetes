@@ -6,6 +6,9 @@ resource "google_container_cluster" "cluster" {
   initial_node_count = "${var.gke_node_count}"
   min_master_version = "${var.gke_version}"
   zone               = "${var.gke_zone}"
+  monitoring_service = "none"
+  logging_service = "none"
+  enable_legacy_abac = true
 
   addons_config {
     kubernetes_dashboard {
