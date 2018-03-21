@@ -18,6 +18,8 @@ spec:
       labels:
         app: reddit
         component: post
+      annotations:
+        prometheus.io/scrape: "true"
     spec:
       containers:
       - image: chromko/post:1.0

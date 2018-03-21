@@ -18,6 +18,8 @@ spec:
       labels:
         app: reddit
         component: comment
+    annotations:
+      prometheus.io/scrape: "true"
     spec:
       containers:
       - image: chromko/comment:1.0
