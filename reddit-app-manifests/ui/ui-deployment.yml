@@ -17,8 +17,6 @@ spec:
       labels:
         app: reddit
         component: ui
-    annotations:
-      prometheus.io/scrape: "true"
     spec:
       containers:
       - image: chromko/ui:1.0
